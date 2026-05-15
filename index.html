@@ -1,10 +1,25 @@
 
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>9 Days in Japan — Travel Guide</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'DM Sans', sans-serif; }
-  .guide { max-width: 680px; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 1.25rem 2rem;
+  }
+  .guide {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+  }
   .hero { background: #1a1a2e; color: #f5e6c8; padding: 2.5rem 2rem 2rem; border-radius: var(--border-radius-lg); margin-bottom: 1.5rem; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: #c9415a; opacity: 0.15; }
   .hero::after { content: ''; position: absolute; bottom: -30px; left: 40px; width: 140px; height: 140px; border-radius: 50%; background: #e8985e; opacity: 0.12; }
@@ -43,7 +58,33 @@
   .highlight-strip { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
   .highlight-pill { font-size: 12px; background: #1a1a2e; color: #f5e6c8; padding: 4px 10px; border-radius: 20px; font-weight: 400; }
   .footer-note { text-align: center; font-size: 12px; color: var(--color-text-secondary); padding: 1rem 0 0.5rem; letter-spacing: 1px; }
+
+  @media (max-width: 600px) {
+    body { padding: 0.75rem 1rem 1.5rem; }
+    .hero { padding: 1.75rem 1.25rem 1.5rem; }
+    .hero-title { font-size: 32px; }
+    .hero-dates {
+      flex-wrap: wrap;
+      gap: 1rem 1.25rem;
+    }
+    .hero-stat { min-width: calc(50% - 0.625rem); }
+    .hero-stat-val { font-size: 20px; }
+    .city-divider-label { font-size: 18px; }
+    .day-header { padding: 0.875rem 1rem; gap: 0.75rem; }
+    .day-body { padding: 0 1rem 1rem; }
+    .day-title { font-size: 14px; }
+    .places-grid { grid-template-columns: 1fr; }
+    .highlight-strip { justify-content: center; }
+  }
+
+  @media (max-width: 380px) {
+    .hero-title { font-size: 28px; }
+    .hero-stat { min-width: 100%; }
+    .hero-stat-val { font-size: 18px; }
+  }
 </style>
+</head>
+<body>
 
 <div class="guide">
   <div class="hero">
@@ -287,3 +328,5 @@ function toggle(header) {
   chevron.classList.toggle('open', !isOpen);
 }
 </script>
+</body>
+</html>
