@@ -1,0 +1,160 @@
+{
+  "sections": [
+    {
+      "type": "city-divider",
+      "label": "Tokyo",
+      "flag": "🗼"
+    },
+    {
+      "type": "section-label",
+      "text": "April 11 – 15 · 4 nights at Agora Place Asakusa"
+    },
+    {
+      "type": "day",
+      "day": 1,
+      "badge": { "background": "#fce4ec", "color": "#c9415a" },
+      "title": "Arrival Day — Asakusa",
+      "meta": "April 11 · Easy first evening",
+      "places": [
+        { "icon": "ti-plane-arrival", "name": "BLR → HKG → NRT", "type": "Flight via Hong Kong", "url": "https://www.google.com/maps/search/?api=1&query=Narita+International+Airport" },
+        { "icon": "ti-walk", "name": "Sumida River Walk", "type": "Scenic stroll", "url": "https://www.google.com/maps/search/?api=1&query=Sumida+River+Walk+Tokyo" },
+        { "icon": "ti-shopping-bag", "name": "Don Quijote Asakusa", "type": "Late-night shopping", "url": "https://www.google.com/maps/search/?api=1&query=Don+Quijote+Asakusa" }
+      ],
+      "tip": { "label": "Tip", "text": "Don Quijote (Donki) is open 24 hrs — perfect for picking up essentials, snacks & souvenirs after a long flight." }
+    },
+    {
+      "type": "day",
+      "day": 2,
+      "badge": { "background": "#fce4ec", "color": "#c9415a" },
+      "title": "Ueno · Shinjuku · teamLab · Tokyo Tower",
+      "meta": "April 12 · Full day city sweep",
+      "places": [
+        { "icon": "ti-tree", "name": "Ueno Park", "type": "7–9:30 AM · Cherry blossoms", "url": "https://www.google.com/maps/search/?api=1&query=Ueno+Park+Tokyo" },
+        { "icon": "ti-sword", "name": "Samurai Restaurant", "type": "10:30 AM · Lunch & show", "url": "https://klook.tpx.lu/kmFdTFyQ" },
+        { "icon": "ti-leaf", "name": "Shinjuku Gyoen", "type": "12:30 PM · National garden", "url": "https://www.google.com/maps/search/?api=1&query=Shinjuku+Gyoen" },
+        { "icon": "ti-brand-abstract", "name": "teamLab Borderless", "type": "4–6 PM · Digital art", "url": "https://klook.tpx.lu/NWoJagxB" },
+        { "icon": "ti-building", "name": "Tokyo Tower", "type": "6–7 PM · Night views", "url": "https://www.google.com/maps/search/?api=1&query=Tokyo+Tower" },
+        { "icon": "ti-devices", "name": "Yodobashi Akiba", "type": "Electronics paradise", "url": "https://www.google.com/maps/search/?api=1&query=Yodobashi+Akihabara" }
+      ],
+      "tip": { "label": "Must-do", "text": "Book teamLab Borderless tickets in advance — they sell out weeks ahead, especially in April." }
+    },
+    {
+      "type": "day",
+      "day": 3,
+      "badge": { "background": "#fce4ec", "color": "#c9415a" },
+      "title": "Sensoji · Go-Karts · Shibuya",
+      "meta": "April 13 · Culture & chaos",
+      "places": [
+        { "icon": "ti-torii", "name": "Sensō-ji Temple", "type": "Tokyo's oldest temple", "url": "https://www.google.com/maps/search/?api=1&query=Senso-ji+Temple+Asakusa" },
+        { "icon": "ti-flower", "name": "Nezu Shrine Azalea", "type": "Seasonal garden", "url": "https://www.google.com/maps/search/?api=1&query=Nezu+Shrine+Tokyo" },
+        { "icon": "ti-car", "name": "Mario Kart Asakusa", "type": "Street go-karts!", "url": "https://klook.tpx.lu/1ZxTZj5T" },
+        { "icon": "ti-tools-kitchen-2", "name": "Kappabashi Town", "type": "Kitchen supply street", "url": "https://www.google.com/maps/search/?api=1&query=Kappabashi+Street+Tokyo" },
+        { "icon": "ti-sunset", "name": "Shibuya Sky", "type": "4:30–6:30 PM · Rooftop", "url": "https://klook.tpx.lu/Nd71mKNE" },
+        { "icon": "ti-arrows-cross", "name": "Shibuya Crossing", "type": "6:30 PM · Iconic corner", "url": "https://www.google.com/maps/search/?api=1&query=Shibuya+Crossing" }
+      ],
+      "tip": { "label": "Tip", "text": "Go to Sensō-ji early (before 8 AM) to beat the tourist rush — the atmosphere at dawn is magical." }
+    },
+    {
+      "type": "day",
+      "day": 4,
+      "badge": { "background": "#fce4ec", "color": "#c9415a" },
+      "title": "Hakone · Mt Fuji · Memory Lane",
+      "meta": "April 14 · Day trip escape",
+      "places": [
+        { "icon": "ti-mountain", "name": "Hakone", "type": "Ryokan views & hot springs", "url": "https://klook.tpx.lu/WObBsoZD" },
+        { "icon": "ti-mountain", "name": "Fujikawaguchiko", "type": "Mt Fuji viewpoint", "url": "https://klook.tpx.lu/WObBsoZD" },
+        { "icon": "ti-building-skyscraper", "name": "Tokyo Mode Gakuen", "type": "6 PM · Architecture", "url": "https://klook.tpx.lu/WObBsoZD" },
+        { "icon": "ti-building-community", "name": "Tokyo Metropolitan Gov.", "type": "7 PM · Free observation deck", "url": "https://www.google.com/maps/search/?api=1&query=Tokyo+Metropolitan+Government+Building" },
+        { "icon": "ti-grill", "name": "Omoide Yokocho", "type": "Memory Lane izakayas", "url": "https://www.google.com/maps/search/?api=1&query=Omoide+Yokocho+Shinjuku" }
+      ],
+      "tip": { "label": "Tip", "text": "The Tokyo Metropolitan Government Building observation deck is completely free and gives a stunning 360° view of the city at night." }
+    },
+    {
+      "type": "city-divider",
+      "label": "Kyoto",
+      "flag": "⛩️",
+      "spaced": true
+    },
+    {
+      "type": "section-label",
+      "text": "April 15 – 18 · Hotel SUI Kyoto Kiyomizu"
+    },
+    {
+      "type": "day",
+      "day": 5,
+      "badge": { "background": "#e8f5e9", "color": "#2e7d32" },
+      "title": "Arashiyama Bamboo & Temples",
+      "meta": "April 15 · Transfer day + Kyoto afternoons",
+      "places": [
+        { "icon": "ti-train", "name": "Shinkansen to Kyoto", "type": "~2.5 hr from Tokyo", "url": "https://www.google.com/maps/search/?api=1&query=Kyoto+Station" },
+        { "icon": "ti-temple", "name": "Otagi Nenbutsuji", "type": "Note: closed Wednesdays", "url": "https://www.google.com/maps/search/?api=1&query=Otagi+Nenbutsuji" },
+        { "icon": "ti-trees", "name": "Arashiyama Bamboo", "type": "3–4 PM · Iconic grove", "url": "https://www.google.com/maps/search/?api=1&query=Arashiyama+Bamboo+Grove" },
+        { "icon": "ti-building-arch", "name": "Adashino Nenbutsuji", "type": "Historic stone buddha", "url": "https://www.google.com/maps/search/?api=1&query=Adashino+Nenbutsuji" },
+        { "icon": "ti-road", "name": "Saga-toriimoto St.", "type": "Preserved historic street", "url": "https://www.google.com/maps/search/?api=1&query=Saga+Toriimoto+Preserved+Street" }
+      ],
+      "tip": { "label": "Heads up", "text": "Otagi Nenbutsuji is closed on Wednesdays — plan accordingly if you swap days around." }
+    },
+    {
+      "type": "day",
+      "day": 6,
+      "badge": { "background": "#e8f5e9", "color": "#2e7d32" },
+      "title": "Amanohashidate Day Trip",
+      "meta": "April 16 · Japan's 3 scenic views",
+      "places": [
+        { "icon": "ti-bridge", "name": "Amanohashidate", "type": "The \"Bridge to Heaven\"", "url": "https://getyourguide.tpx.lu/NrWobDPE" },
+        { "icon": "ti-waves", "name": "Amanohashidate Beach", "type": "Sandy pine-lined shore", "url": "https://getyourguide.tpx.lu/NrWobDPE" },
+        { "icon": "ti-building-arch", "name": "Chionji Temple", "type": "Pagoda at the sandbar", "url": "https://getyourguide.tpx.lu/NrWobDPE" },
+        { "icon": "ti-wine", "name": "Amanohashidate Winery", "type": "Local Japanese wine", "url": "https://getyourguide.tpx.lu/NrWobDPE" }
+      ],
+      "tip": { "label": "Must-do", "text": "The classic view is bending over and looking at Amanohashidate through your legs — it looks like a dragon flying through the sky. Don't skip it!" }
+    },
+    {
+      "type": "day",
+      "day": 7,
+      "badge": { "background": "#e8f5e9", "color": "#2e7d32" },
+      "title": "Fushimi Inari · Nara · Maruyama Park",
+      "meta": "April 17 · Best day of the trip",
+      "places": [
+        { "icon": "ti-torii", "name": "Fushimi Inari", "type": "7:30 AM · 10,000 gates", "url": "https://www.google.com/maps/search/?api=1&query=Fushimi+Inari+Taisha" },
+        { "icon": "ti-train", "name": "Kintetsu to Nara", "type": "~35 min from Kyoto", "url": "https://www.google.com/maps/search/?api=1&query=Nara+Station" },
+        { "icon": "ti-leaf", "name": "Nara Park", "type": "Free-roaming deer!", "url": "https://www.google.com/maps/search/?api=1&query=Nara+Park" },
+        { "icon": "ti-building-arch", "name": "Tōdai-ji", "type": "Giant Buddha temple", "url": "https://www.google.com/maps/search/?api=1&query=Todai-ji+Nara" },
+        { "icon": "ti-building-arch", "name": "Kasugataisha Shrine", "type": "Lantern-lined path", "url": "https://www.google.com/maps/search/?api=1&query=Kasuga+Taisha" },
+        { "icon": "ti-bowl-spoon", "name": "Nakatanidou", "type": "Famous fresh mochi", "url": "https://www.google.com/maps/search/?api=1&query=Nakatanidou+Nara" }
+      ],
+      "tip": { "label": "Tip", "text": "Go to Fushimi Inari at 7:30 AM — the gates are dramatic at dawn and you'll practically have the lower path to yourself. The deer at Nara Park will eat your map. Hide everything." }
+    },
+    {
+      "type": "day",
+      "day": 8,
+      "badge": { "background": "#e8f5e9", "color": "#2e7d32" },
+      "title": "Kiyomizudera · Back to Tokyo",
+      "meta": "April 18 · Morning temple + Shinkansen",
+      "places": [
+        { "icon": "ti-building-arch", "name": "Kiyomizu-dera", "type": "7 AM · Iconic clifftop temple", "url": "https://www.google.com/maps/search/?api=1&query=Kiyomizu-dera" },
+        { "icon": "ti-train", "name": "Shinkansen to Tokyo", "type": "11 AM departure", "url": "https://www.google.com/maps/search/?api=1&query=Tokyo+Station" },
+        { "icon": "ti-tools-kitchen-2", "name": "Kappabashi Again", "type": "Final shopping haul", "url": "https://www.google.com/maps/search/?api=1&query=Kappabashi+Street+Tokyo" },
+        { "icon": "ti-building", "name": "Sakura Fleur Aoyama", "type": "Last night hotel", "url": "https://www.google.com/maps/search/?api=1&query=Sakura+Fleur+Aoyama" }
+      ],
+      "tip": { "label": "Tip", "text": "Kiyomizudera at 7 AM is misty, quiet, and looks like a painting — completely different from how it looks in tourist photos taken midday." }
+    },
+    {
+      "type": "city-divider",
+      "label": "Departure",
+      "flag": "✈️",
+      "spaced": true
+    },
+    {
+      "type": "day",
+      "day": 9,
+      "badge": { "background": "#e3f2fd", "color": "#1565c0" },
+      "title": "Chiba · Narita · Fly Home",
+      "meta": "April 19 · NRT → HKG → BLR",
+      "places": [
+        { "icon": "ti-map-pin", "name": "Chiba", "type": "Quick morning explore", "url": "https://www.google.com/maps/search/?api=1&query=Chiba+City" },
+        { "icon": "ti-plane-departure", "name": "Narita Airport", "type": "Flight 2:50 PM", "url": "https://www.google.com/maps/search/?api=1&query=Narita+International+Airport" }
+      ],
+      "tip": { "label": "Tip", "text": "Narita is far from central Tokyo — allow 90 minutes from the city. The Narita Express (NEX) is the easiest option from Shinjuku or Shibuya." }
+    }
+  ]
+}
