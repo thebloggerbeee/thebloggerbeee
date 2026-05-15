@@ -8,6 +8,20 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8D5A3;
+    --gold-glow: rgba(201, 168, 76, 0.35);
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #5c5c5c;
+    --color-border-tertiary: rgba(201, 168, 76, 0.22);
+    --color-background-primary: #fff;
+    --color-background-secondary: #f7f7f7;
+    --border-radius-lg: 20px;
+    --border-radius-md: 10px;
+  }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'DM Sans', sans-serif;
@@ -15,8 +29,60 @@
     display: flex;
     justify-content: center;
     padding: 1rem 1.25rem 2rem;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 168, 76, 0.18), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgba(232, 213, 163, 0.25), transparent 50%),
+      radial-gradient(ellipse 50% 35% at 0% 80%, rgba(201, 168, 76, 0.12), transparent 45%),
+      linear-gradient(165deg, #faf6ee 0%, #f3ead8 45%, #ebe0c8 100%);
+    position: relative;
+    overflow-x: hidden;
   }
+
+  .artifact {
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .artifact-ring {
+    border-radius: 50%;
+    border: 1px solid rgba(201, 168, 76, 0.2);
+  }
+  .artifact-1 {
+    width: 320px; height: 320px;
+    top: -120px; right: -80px;
+    border-width: 2px;
+    opacity: 0.5;
+  }
+  .artifact-2 {
+    width: 180px; height: 180px;
+    bottom: 8%; left: -40px;
+    border-color: rgba(201, 168, 76, 0.15);
+  }
+  .artifact-3 {
+    width: 90px; height: 90px;
+    top: 35%; left: 6%;
+    background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+    border: none;
+  }
+  .artifact-4 {
+    width: 140px; height: 140px;
+    bottom: 18%; right: 5%;
+    border: 1px dashed rgba(201, 168, 76, 0.25);
+    opacity: 0.6;
+  }
+  .artifact-spark {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    box-shadow: 0 0 12px var(--gold-glow);
+  }
+  .artifact-spark-1 { top: 22%; right: 18%; }
+  .artifact-spark-2 { bottom: 32%; left: 12%; }
+  .artifact-spark-3 { top: 58%; right: 8%; width: 4px; height: 4px; opacity: 0.7; }
+
   .guide {
+    position: relative;
+    z-index: 1;
     width: 100%;
     max-width: 680px;
     margin: 0 auto;
@@ -105,6 +171,7 @@
 
   @media (max-width: 600px) {
     body { padding: 0.75rem 1rem 1.5rem; }
+    .artifact-1, .artifact-4 { opacity: 0.35; }
     .hero { padding: 1.75rem 1.25rem 1.5rem; }
     .hero-title { font-size: 32px; }
     .hero-dates {
@@ -129,6 +196,14 @@
 </style>
 </head>
 <body>
+
+  <div class="artifact artifact-ring artifact-1" aria-hidden="true"></div>
+  <div class="artifact artifact-ring artifact-2" aria-hidden="true"></div>
+  <div class="artifact artifact-ring artifact-3" aria-hidden="true"></div>
+  <div class="artifact artifact-ring artifact-4" aria-hidden="true"></div>
+  <div class="artifact artifact-spark artifact-spark-1" aria-hidden="true"></div>
+  <div class="artifact artifact-spark artifact-spark-2" aria-hidden="true"></div>
+  <div class="artifact artifact-spark artifact-spark-3" aria-hidden="true"></div>
 
 <div class="guide">
   <div class="hero">
