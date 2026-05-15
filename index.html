@@ -1,0 +1,289 @@
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; }
+  .guide { max-width: 680px; }
+  .hero { background: #1a1a2e; color: #f5e6c8; padding: 2.5rem 2rem 2rem; border-radius: var(--border-radius-lg); margin-bottom: 1.5rem; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: #c9415a; opacity: 0.15; }
+  .hero::after { content: ''; position: absolute; bottom: -30px; left: 40px; width: 140px; height: 140px; border-radius: 50%; background: #e8985e; opacity: 0.12; }
+  .hero-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #e8985e; margin-bottom: 0.75rem; }
+  .hero-title { font-family: 'Playfair Display', serif; font-size: 42px; line-height: 1.1; margin-bottom: 0.5rem; }
+  .hero-title em { font-style: italic; color: #e8985e; }
+  .hero-sub { font-size: 14px; color: #c5b99a; font-weight: 300; margin-top: 0.75rem; }
+  .hero-dates { display: flex; gap: 1.5rem; margin-top: 1.5rem; padding-top: 1.5rem; border-top: 0.5px solid rgba(245,230,200,0.2); }
+  .hero-stat { }
+  .hero-stat-val { font-size: 22px; font-weight: 500; color: #f5e6c8; }
+  .hero-stat-label { font-size: 11px; color: #c5b99a; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+  .section-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--color-text-secondary); margin-bottom: 1rem; padding-left: 2px; }
+  .day-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 1rem; }
+  .day-header { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; cursor: pointer; }
+  .day-num { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; flex-shrink: 0; }
+  .day-info { flex: 1; }
+  .day-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); }
+  .day-meta { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+  .day-chevron { font-size: 16px; color: var(--color-text-secondary); transition: transform 0.25s; }
+  .day-chevron.open { transform: rotate(180deg); }
+  .day-body { padding: 0 1.25rem 1.25rem; display: none; }
+  .day-body.open { display: block; }
+  .places-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; margin-top: 4px; }
+  .place-chip { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 8px 10px; }
+  .place-chip-icon { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 4px; }
+  .place-chip-name { font-size: 13px; font-weight: 500; color: var(--color-text-primary); line-height: 1.3; }
+  .place-chip-type { font-size: 11px; color: var(--color-text-secondary); margin-top: 2px; }
+  .tip-box { background: #fdf6ec; border-left: 3px solid #e8985e; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; padding: 10px 12px; margin-top: 12px; }
+  .tip-box-dark { background: var(--color-background-secondary); }
+  .tip-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #c97a2e; margin-bottom: 4px; font-weight: 500; }
+  .tip-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+  .city-divider { display: flex; align-items: center; gap: 12px; margin: 1.5rem 0 1rem; }
+  .city-divider-label { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--color-text-primary); white-space: nowrap; }
+  .city-divider-line { flex: 1; height: 0.5px; background: var(--color-border-tertiary); }
+  .city-divider-flag { font-size: 18px; }
+  .highlight-strip { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+  .highlight-pill { font-size: 12px; background: #1a1a2e; color: #f5e6c8; padding: 4px 10px; border-radius: 20px; font-weight: 400; }
+  .footer-note { text-align: center; font-size: 12px; color: var(--color-text-secondary); padding: 1rem 0 0.5rem; letter-spacing: 1px; }
+</style>
+
+<div class="guide">
+  <div class="hero">
+    <div class="hero-tag">Travel Guide</div>
+    <div class="hero-title">9 Days in<br><em>Japan</em></div>
+    <div class="hero-sub">Tokyo · Hakone · Fuji · Kyoto · Nara — April 2025</div>
+    <div class="hero-dates">
+      <div class="hero-stat"><div class="hero-stat-val">9</div><div class="hero-stat-label">Days</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">3</div><div class="hero-stat-label">Cities</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">30+</div><div class="hero-stat-label">Places</div></div>
+      <div class="hero-stat"><div class="hero-stat-val">BLR→NRT</div><div class="hero-stat-label">Route</div></div>
+    </div>
+  </div>
+
+  <div class="city-divider">
+    <div class="city-divider-line"></div>
+    <div class="city-divider-label">Tokyo</div>
+    <div class="city-divider-flag">🗼</div>
+    <div class="city-divider-line"></div>
+  </div>
+
+  <p class="section-label">April 11 – 15 · 4 nights at Agora Place Asakusa</p>
+
+  <div class="day-card">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num" style="background:#fce4ec;color:#c9415a;">1</div>
+      <div class="day-info">
+        <div class="day-title">Arrival Day — Asakusa</div>
+        <div class="day-meta">April 11 · Easy first evening</div>
+      </div>
+      <i class="ti ti-chevron-down day-chevron"></i>
+    </div>
+    <div class="day-body">
+      <div class="places-grid">
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-plane-arrival" aria-hidden="true"></i></div><div class="place-chip-name">BLR → HKG → NRT</div><div class="place-chip-type">Flight via Hong Kong</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-walk" aria-hidden="true"></i></div><div class="place-chip-name">Sumida River Walk</div><div class="place-chip-type">Scenic stroll</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-shopping-bag" aria-hidden="true"></i></div><div class="place-chip-name">Don Quijote Asakusa</div><div class="place-chip-type">Late-night shopping</div></div>
+      </div>
+      <div class="tip-box"><div class="tip-label">Tip</div><div class="tip-text">Don Quijote (Donki) is open 24 hrs — perfect for picking up essentials, snacks & souvenirs after a long flight.</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num" style="background:#fce4ec;color:#c9415a;">2</div>
+      <div class="day-info">
+        <div class="day-title">Ueno · Shinjuku · teamLab · Tokyo Tower</div>
+        <div class="day-meta">April 12 · Full day city sweep</div>
+      </div>
+      <i class="ti ti-chevron-down day-chevron"></i>
+    </div>
+    <div class="day-body">
+      <div class="places-grid">
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-tree" aria-hidden="true"></i></div><div class="place-chip-name">Ueno Park</div><div class="place-chip-type">7–9:30 AM · Cherry blossoms</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-sword" aria-hidden="true"></i></div><div class="place-chip-name">Samurai Restaurant</div><div class="place-chip-type">10:30 AM · Lunch & show</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-leaf" aria-hidden="true"></i></div><div class="place-chip-name">Shinjuku Gyoen</div><div class="place-chip-type">12:30 PM · National garden</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-brand-abstract" aria-hidden="true"></i></div><div class="place-chip-name">teamLab Borderless</div><div class="place-chip-type">4–6 PM · Digital art</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-building" aria-hidden="true"></i></div><div class="place-chip-name">Tokyo Tower</div><div class="place-chip-type">6–7 PM · Night views</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-devices" aria-hidden="true"></i></div><div class="place-chip-name">Yodobashi Akiba</div><div class="place-chip-type">Electronics paradise</div></div>
+      </div>
+      <div class="tip-box"><div class="tip-label">Must-do</div><div class="tip-text">Book teamLab Borderless tickets in advance — they sell out weeks ahead, especially in April.</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num" style="background:#fce4ec;color:#c9415a;">3</div>
+      <div class="day-info">
+        <div class="day-title">Sensoji · Go-Karts · Shibuya</div>
+        <div class="day-meta">April 13 · Culture & chaos</div>
+      </div>
+      <i class="ti ti-chevron-down day-chevron"></i>
+    </div>
+    <div class="day-body">
+      <div class="places-grid">
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-torii" aria-hidden="true"></i></div><div class="place-chip-name">Sensō-ji Temple</div><div class="place-chip-type">Tokyo's oldest temple</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-flower" aria-hidden="true"></i></div><div class="place-chip-name">Nezu Shrine Azalea</div><div class="place-chip-type">Seasonal garden</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-car" aria-hidden="true"></i></div><div class="place-chip-name">Mario Kart Asakusa</div><div class="place-chip-type">Street go-karts!</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-tools-kitchen-2" aria-hidden="true"></i></div><div class="place-chip-name">Kappabashi Town</div><div class="place-chip-type">Kitchen supply street</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-sunset" aria-hidden="true"></i></div><div class="place-chip-name">Shibuya Sky</div><div class="place-chip-type">4:30–6:30 PM · Rooftop</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-arrows-cross" aria-hidden="true"></i></div><div class="place-chip-name">Shibuya Crossing</div><div class="place-chip-type">6:30 PM · Iconic corner</div></div>
+      </div>
+      <div class="tip-box"><div class="tip-label">Tip</div><div class="tip-text">Go to Sensō-ji early (before 8 AM) to beat the tourist rush — the atmosphere at dawn is magical.</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num" style="background:#fce4ec;color:#c9415a;">4</div>
+      <div class="day-info">
+        <div class="day-title">Hakone · Mt Fuji · Memory Lane</div>
+        <div class="day-meta">April 14 · Day trip escape</div>
+      </div>
+      <i class="ti ti-chevron-down day-chevron"></i>
+    </div>
+    <div class="day-body">
+      <div class="places-grid">
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-mountain" aria-hidden="true"></i></div><div class="place-chip-name">Hakone</div><div class="place-chip-type">Ryokan views & hot springs</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-mountain" aria-hidden="true"></i></div><div class="place-chip-name">Fujikawaguchiko</div><div class="place-chip-type">Mt Fuji viewpoint</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-building-skyscraper" aria-hidden="true"></i></div><div class="place-chip-name">Tokyo Mode Gakuen</div><div class="place-chip-type">6 PM · Architecture</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-building-community" aria-hidden="true"></i></div><div class="place-chip-name">Tokyo Metropolitan Gov.</div><div class="place-chip-type">7 PM · Free observation deck</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-grill" aria-hidden="true"></i></div><div class="place-chip-name">Omoide Yokocho</div><div class="place-chip-type">Memory Lane izakayas</div></div>
+      </div>
+      <div class="tip-box"><div class="tip-label">Tip</div><div class="tip-text">The Tokyo Metropolitan Government Building observation deck is completely free and gives a stunning 360° view of the city at night.</div></div>
+    </div>
+  </div>
+
+  <div class="city-divider" style="margin-top:2rem;">
+    <div class="city-divider-line"></div>
+    <div class="city-divider-label">Kyoto</div>
+    <div class="city-divider-flag">⛩️</div>
+    <div class="city-divider-line"></div>
+  </div>
+
+  <p class="section-label">April 15 – 18 · Hotel SUI Kyoto Kiyomizu</p>
+
+  <div class="day-card">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num" style="background:#e8f5e9;color:#2e7d32;">5</div>
+      <div class="day-info">
+        <div class="day-title">Arashiyama Bamboo & Temples</div>
+        <div class="day-meta">April 15 · Transfer day + Kyoto afternoons</div>
+      </div>
+      <i class="ti ti-chevron-down day-chevron"></i>
+    </div>
+    <div class="day-body">
+      <div class="places-grid">
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-train" aria-hidden="true"></i></div><div class="place-chip-name">Shinkansen to Kyoto</div><div class="place-chip-type">~2.5 hr from Tokyo</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-temple" aria-hidden="true"></i></div><div class="place-chip-name">Otagi Nenbutsuji</div><div class="place-chip-type">Note: closed Wednesdays</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-trees" aria-hidden="true"></i></div><div class="place-chip-name">Arashiyama Bamboo</div><div class="place-chip-type">3–4 PM · Iconic grove</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-building-arch" aria-hidden="true"></i></div><div class="place-chip-name">Adashino Nenbutsuji</div><div class="place-chip-type">Historic stone buddha</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-road" aria-hidden="true"></i></div><div class="place-chip-name">Saga-toriimoto St.</div><div class="place-chip-type">Preserved historic street</div></div>
+      </div>
+      <div class="tip-box"><div class="tip-label">Heads up</div><div class="tip-text">Otagi Nenbutsuji is closed on Wednesdays — plan accordingly if you swap days around.</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num" style="background:#e8f5e9;color:#2e7d32;">6</div>
+      <div class="day-info">
+        <div class="day-title">Amanohashidate Day Trip</div>
+        <div class="day-meta">April 16 · Japan's 3 scenic views</div>
+      </div>
+      <i class="ti ti-chevron-down day-chevron"></i>
+    </div>
+    <div class="day-body">
+      <div class="places-grid">
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-bridge" aria-hidden="true"></i></div><div class="place-chip-name">Amanohashidate</div><div class="place-chip-type">The "Bridge to Heaven"</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-waves" aria-hidden="true"></i></div><div class="place-chip-name">Amanohashidate Beach</div><div class="place-chip-type">Sandy pine-lined shore</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-building-arch" aria-hidden="true"></i></div><div class="place-chip-name">Chionji Temple</div><div class="place-chip-type">Pagoda at the sandbar</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-wine" aria-hidden="true"></i></div><div class="place-chip-name">Amanohashidate Winery</div><div class="place-chip-type">Local Japanese wine</div></div>
+      </div>
+      <div class="tip-box"><div class="tip-label">Must-do</div><div class="tip-text">The classic view is bending over and looking at Amanohashidate through your legs — it looks like a dragon flying through the sky. Don't skip it!</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num" style="background:#e8f5e9;color:#2e7d32;">7</div>
+      <div class="day-info">
+        <div class="day-title">Fushimi Inari · Nara · Maruyama Park</div>
+        <div class="day-meta">April 17 · Best day of the trip</div>
+      </div>
+      <i class="ti ti-chevron-down day-chevron"></i>
+    </div>
+    <div class="day-body">
+      <div class="places-grid">
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-torii" aria-hidden="true"></i></div><div class="place-chip-name">Fushimi Inari</div><div class="place-chip-type">7:30 AM · 10,000 gates</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-train" aria-hidden="true"></i></div><div class="place-chip-name">Kintetsu to Nara</div><div class="place-chip-type">~35 min from Kyoto</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-leaf" aria-hidden="true"></i></div><div class="place-chip-name">Nara Park</div><div class="place-chip-type">Free-roaming deer!</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-building-arch" aria-hidden="true"></i></div><div class="place-chip-name">Tōdai-ji</div><div class="place-chip-type">Giant Buddha temple</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-building-arch" aria-hidden="true"></i></div><div class="place-chip-name">Kasugataisha Shrine</div><div class="place-chip-type">Lantern-lined path</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-bowl-spoon" aria-hidden="true"></i></div><div class="place-chip-name">Nakatanidou</div><div class="place-chip-type">Famous fresh mochi</div></div>
+      </div>
+      <div class="tip-box"><div class="tip-label">Tip</div><div class="tip-text">Go to Fushimi Inari at 7:30 AM — the gates are dramatic at dawn and you'll practically have the lower path to yourself. The deer at Nara Park will eat your map. Hide everything.</div></div>
+    </div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num" style="background:#e8f5e9;color:#2e7d32;">8</div>
+      <div class="day-info">
+        <div class="day-title">Kiyomizudera · Back to Tokyo</div>
+        <div class="day-meta">April 18 · Morning temple + Shinkansen</div>
+      </div>
+      <i class="ti ti-chevron-down day-chevron"></i>
+    </div>
+    <div class="day-body">
+      <div class="places-grid">
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-building-arch" aria-hidden="true"></i></div><div class="place-chip-name">Kiyomizu-dera</div><div class="place-chip-type">7 AM · Iconic clifftop temple</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-train" aria-hidden="true"></i></div><div class="place-chip-name">Shinkansen to Tokyo</div><div class="place-chip-type">11 AM departure</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-tools-kitchen-2" aria-hidden="true"></i></div><div class="place-chip-name">Kappabashi Again</div><div class="place-chip-type">Final shopping haul</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-building" aria-hidden="true"></i></div><div class="place-chip-name">Sakura Fleur Aoyama</div><div class="place-chip-type">Last night hotel</div></div>
+      </div>
+      <div class="tip-box"><div class="tip-label">Tip</div><div class="tip-text">Kiyomizudera at 7 AM is misty, quiet, and looks like a painting — completely different from how it looks in tourist photos taken midday.</div></div>
+    </div>
+  </div>
+
+  <div class="city-divider" style="margin-top:2rem;">
+    <div class="city-divider-line"></div>
+    <div class="city-divider-label">Departure</div>
+    <div class="city-divider-flag">✈️</div>
+    <div class="city-divider-line"></div>
+  </div>
+
+  <div class="day-card">
+    <div class="day-header" onclick="toggle(this)">
+      <div class="day-num" style="background:#e3f2fd;color:#1565c0;">9</div>
+      <div class="day-info">
+        <div class="day-title">Chiba · Narita · Fly Home</div>
+        <div class="day-meta">April 19 · NRT → HKG → BLR</div>
+      </div>
+      <i class="ti ti-chevron-down day-chevron"></i>
+    </div>
+    <div class="day-body">
+      <div class="places-grid">
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div><div class="place-chip-name">Chiba</div><div class="place-chip-type">Quick morning explore</div></div>
+        <div class="place-chip"><div class="place-chip-icon"><i class="ti ti-plane-departure" aria-hidden="true"></i></div><div class="place-chip-name">Narita Airport</div><div class="place-chip-type">Flight 2:50 PM</div></div>
+      </div>
+      <div class="tip-box"><div class="tip-label">Tip</div><div class="tip-text">Narita is far from central Tokyo — allow 90 minutes from the city. The Narita Express (NEX) is the easiest option from Shinjuku or Shibuya.</div></div>
+    </div>
+  </div>
+
+  <div class="highlight-strip" style="margin: 1.5rem 0 0.5rem;">
+    <div class="highlight-pill">🎌 Best for: First-time Japan</div>
+    <div class="highlight-pill">🌸 Season: Cherry Blossom April</div>
+    <div class="highlight-pill">🚅 Shinkansen recommended</div>
+    <div class="highlight-pill">📍 Bengaluru → Tokyo</div>
+  </div>
+
+  <div class="footer-note">save · share · explore more</div>
+</div>
+
+<script>
+function toggle(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.day-chevron');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  chevron.classList.toggle('open', !isOpen);
+}
+</script>
