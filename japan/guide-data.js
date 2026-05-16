@@ -1,4 +1,4 @@
-{
+const guideData = {
   "sections": [
     {
       "type": "city-divider",
@@ -19,7 +19,7 @@
           "icon": "ti-plane-arrival",
           "name": "BLR → HND/NRT",
           "type": "~9–10 hr flight. Narita is well-connected to central Tokyo via the Narita Express (NEX).",
-          "url": "https://www.google.com/maps/search/?api=1&query=Tokyo"
+          "url": ""
         },
         {
           "icon": "ti-building",
@@ -527,4 +527,4 @@
       }
     }
   ]
-}
+};
