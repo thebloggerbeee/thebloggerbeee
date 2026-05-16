@@ -314,6 +314,9 @@ body {
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   margin-bottom: 1rem;
+  /* ADD THESE TWO LINES: */
+  border-top: 2px solid #C9A84C;
+  box-shadow: 0 4px 18px -4px rgba(201, 168, 76, 0.22), 0 1px 4px rgba(0,0,0,0.05);
 }
 
 .day-header {
@@ -345,6 +348,8 @@ body {
   font-size: 13px;
   font-weight: 500;
   flex-shrink: 0;
+  background: #C9A84C !important;
+  color: #ffffff !important;
 }
 
 .day-info {
@@ -406,7 +411,8 @@ body {
 
 a.place-chip {
   display: block;
-  background: var(--color-background-secondary, #f7f7f7);
+  background: rgba(201, 168, 76, 0.08);
+  border: 0.5px solid rgba(201, 168, 76, 0.2);
   border-radius: 8px;
   padding: 8px 10px;
   text-decoration: none;
@@ -416,8 +422,8 @@ a.place-chip {
 }
 
 a.place-chip:hover {
-  background: #ececec;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  background: rgba(201, 168, 76, 0.15);
+  box-shadow: 0 1px 4px rgba(201, 168, 76, 0.15);
 }
 
 a.place-chip:focus-visible {
