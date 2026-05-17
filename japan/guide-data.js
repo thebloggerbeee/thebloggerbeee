@@ -114,13 +114,13 @@ const guideData = {
           "icon": "ti-brand-abstract",
           "name": "teamLab Borderless",
           "type": "A mind-bending labyrinth of 60+ immersive digital artworks — light, sound, and water blur the line between art and reality.",
-          "url": "https://klook.tpx.lu/NWoJagxB"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278297&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F20707-teamlab-borderless-admission-ticket-tokyo%2F"
         },
         {
           "icon": "ti-building",
           "name": "Tokyo Tower",
           "type": "Tokyo's iconic 333m red-and-white lattice tower with panoramic night views — especially magical illuminated after dark.",
-          "url": "https://www.google.com/maps/search/?api=1&query=Tokyo+Tower"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1279006&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F4911-tokyo-tower-main-observatory-ticket-tokyo%2F"
         },
         {
           "icon": "ti-devices",
@@ -160,7 +160,7 @@ const guideData = {
           "icon": "ti-car",
           "name": "Mario Kart Asakusa",
           "type": "Race through Tokyo's real streets in full Mario costume — the ultimate surreal, bucket-list Tokyo experience.",
-          "url": "https://klook.tpx.lu/1ZxTZj5T"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278297&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F116875-shibuya-go-karting-experience-by-akiba-kart-shibuya%2F"
         },
         {
           "icon": "ti-tools-kitchen-2",
@@ -172,7 +172,7 @@ const guideData = {
           "icon": "ti-sunset",
           "name": "Shibuya Sky",
           "type": "An open-air rooftop observation deck atop Shibuya Scramble Square with jaw-dropping 360° views of the Tokyo skyline.",
-          "url": "https://klook.tpx.lu/Nd71mKNE"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F70672-shibuya-sky-tokyo%2F"
         },
         {
           "icon": "ti-arrows-cross",
@@ -200,43 +200,43 @@ const guideData = {
           "icon": "ti-torii",
           "name": "Hakone Shrine",
           "type": "10:00 AM · 40 min · Founded in 757 AD on the shores of Lake Ashi — famous for its vermilion torii gates and a classic photo backdrop of Mt Fuji.",
-          "url": "https://klook.tpx.lu/WObBsoZD"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F124332-hakone-shrine-lake-ashi-owakudani-yamanakako-day-tour-from-tokyo%2F"
         },
         {
           "icon": "ti-droplet",
           "name": "Heiwa no Torii",
           "type": "10:40 AM · 20 min · Hakone Shrine's iconic torii gate standing in the waters of Lake Ashi — Mt Fuji reflected behind it makes for one of Japan's most breathtaking scenes.",
-          "url": "https://klook.tpx.lu/WObBsoZD"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F124332-hakone-shrine-lake-ashi-owakudani-yamanakako-day-tour-from-tokyo%2F"
         },
         {
           "icon": "ti-sailboat",
           "name": "Hakone Pirate Ship · Tōgendai Port",
           "type": "11:10 AM · 30 min · Sail Lake Ashi on a replica 18th-century European warship with stunning views of Mt Fuji and the shrine torii gate. One-way ticket ~¥1,700.",
-          "url": "https://klook.tpx.lu/WObBsoZD"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F124332-hakone-shrine-lake-ashi-owakudani-yamanakako-day-tour-from-tokyo%2F"
         },
         {
           "icon": "ti-cloud",
           "name": "Owakudani Ropeway",
           "type": "11:40 AM · 30 min · Ride the Hakone Ropeway over a steaming volcanic valley — on clear days you get sweeping views of Mt Fuji and Lake Ashi far below.",
-          "url": "https://klook.tpx.lu/WObBsoZD"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F124332-hakone-shrine-lake-ashi-owakudani-yamanakako-day-tour-from-tokyo%2F"
         },
         {
           "icon": "ti-flame",
           "name": "Owakudani Volcanic Site",
           "type": "12:10 PM · 40 min · A dramatic active volcanic zone formed 3,000 years ago — sulfurous steam vents, boiling hot springs, and the famous black eggs cooked in the geothermal pools.",
-          "url": "https://klook.tpx.lu/WObBsoZD"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F124332-hakone-shrine-lake-ashi-owakudani-yamanakako-day-tour-from-tokyo%2F"
         },
         {
           "icon": "ti-ripple",
           "name": "Yamanakako",
           "type": "1:50 PM · The largest and highest of the Fuji Five Lakes — famous for its \"Upside-Down Fuji\" reflection, resident swans, and the rare summer Diamond Fuji phenomenon.",
-          "url": "https://klook.tpx.lu/WObBsoZD"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F124332-hakone-shrine-lake-ashi-owakudani-yamanakako-day-tour-from-tokyo%2F"
         },
         {
           "icon": "ti-droplets",
           "name": "Oshino Hakkai",
           "type": "2:30 PM · 40 min · Eight crystal-clear spring ponds fed by Mt Fuji snowmelt filtered over decades — dubbed \"Japan's Jiuzhaigou\" with water so pure you can drink it straight.",
-          "url": "https://klook.tpx.lu/WObBsoZD"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Fen-IN%2Factivity%2F124332-hakone-shrine-lake-ashi-owakudani-yamanakako-day-tour-from-tokyo%2F"
         },
         {
           "icon": "ti-building-community",
@@ -326,49 +326,49 @@ const guideData = {
           "icon": "ti-fish",
           "name": "Ine",
           "type": "1 hr · A magical fishing village of 230+ funaya boathouses built directly over the sea — one of Japan's most scenic and unspoiled coastal spots.",
-          "url": "https://gyg.me/AbJBT0re"
+          "url": "https://gyg.me/u9MIw6ya"
         },
         {
           "icon": "ti-sailboat",
           "name": "Ine Bay Sightseeing Boat · Re:ine",
           "type": "Optional · Extra fee · Cruise Ine Bay by boat to see the funaya from the water — the best angle to appreciate this utterly unique floating village.",
-          "url": "https://gyg.me/AbJBT0re"
+          "url": "https://gyg.me/u9MIw6ya"
         },
         {
           "icon": "ti-bridge",
           "name": "Amanohashidate",
           "type": "2 hrs · A 3.6km pine-forested sandbar across a serene lagoon — one of Japan's three most celebrated views, best seen from the hills above.",
-          "url": "https://gyg.me/AbJBT0re"
+          "url": "https://gyg.me/u9MIw6ya"
         },
         {
           "icon": "ti-aerial-lift",
           "name": "Amanohashidate Chairlift & Monorail",
           "type": "Extra fee · Ride up to the viewpoint above the sandbar — the chairlift offers a breezy open-air ascent with sweeping lagoon panoramas below.",
-          "url": "https://gyg.me/AbJBT0re"
+          "url": "https://gyg.me/u9MIw6ya"
         },
         {
           "icon": "ti-binoculars",
           "name": "Amanohashidate Viewland",
           "type": "The hilltop vantage point for the classic \"stock dive\" view — bend over and look through your legs to see the sandbar soar like a dragon through the sky.",
-          "url": "https://gyg.me/AbJBT0re"
+          "url": "https://gyg.me/u9MIw6ya"
         },
         {
           "icon": "ti-walk",
           "name": "Kaisen Bridge",
           "type": "A rotating bridge at the southern tip of the sandbar that swings open to let boats through — a lovely photo stop at the start of the pine-lined walk.",
-          "url": "https://gyg.me/AbJBT0re"
+          "url": "https://gyg.me/u9MIw6ya"
         },
         {
           "icon": "ti-building-arch",
           "name": "Chionji Temple",
           "type": "A 1,300-year-old temple at the foot of the sandbar known for wisdom-granting amulets — its pagoda and tranquil grounds make for great photos.",
-          "url": "https://gyg.me/AbJBT0re"
+          "url": "https://gyg.me/u9MIw6ya"
         },
         {
           "icon": "ti-home",
           "name": "Miyama Kayabuki-no-Sato",
           "type": "40 min · A beautifully preserved thatched-roof village hidden deep in the Kyoto mountains — feels like stepping into rural Japan from centuries past.",
-          "url": "https://gyg.me/AbJBT0re"
+          "url": "https://gyg.me/u9MIw6ya"
         }
       ],
       "tip": {
@@ -396,7 +396,7 @@ const guideData = {
           "icon": "ti-train",
           "name": "Kintetsu to Nara",
           "type": "A quick ~35-min train from Kyoto drops you into Japan's ancient first capital, a UNESCO-listed city of temples and wild deer.",
-          "url": "https://www.google.com/maps/search/?api=1&query=Nara+Station"
+          "url": "https://www.kintetsu.co.jp/foreign/english/aoniyoshi/"
         },
         {
           "icon": "ti-leaf",
@@ -472,13 +472,19 @@ const guideData = {
           "icon": "ti-dress",
           "name": "Kimono Experience",
           "type": "Transform into a vision of old Kyoto — choose your fabric, obi, and accessories with expert staff help for a fully authentic kimono dressing.",
-          "url": "https://www.google.com/maps/search/?api=1&query=Kimono+Rental+Kyoto+Higashiyama"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F141642-kyoto-kiyomizudera-kimono-yukata-makeup-outdoor-photography-mocomoco%2F"
         },
         {
           "icon": "ti-camera",
           "name": "Kimono Photoshoot",
           "type": "Stroll the cobblestones of Ninenzaka and Sannenzaka in full kimono for a guided photoshoot — every stone-lantern alley makes a perfect frame.",
-          "url": "https://klook.tpx.lu/FQDL8qDp"
+          "url": "https://affiliate.klook.com/redirect?aid=114802&aff_adid=1278311&k_site=https%3A%2F%2Fwww.klook.com%2Factivity%2F141642-kyoto-kiyomizudera-kimono-yukata-makeup-outdoor-photography-mocomoco%2F"
+        },
+        {
+          "icon": "ti-tournament",
+          "name": "Sumo Experience Kyoto",
+          "type": "Watch retired pro wrestlers in a real dohyo ring — includes a geisha dance opener, live sumo bouts, a chance to challenge a wrestler, all-you-can-eat chanko-nabe hot pot, and a souvenir gift bag.",
+          "url": "https://gyg.me/3nJIVo2J"
         },
         {
           "icon": "ti-train",
