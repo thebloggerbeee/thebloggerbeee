@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mistakes to Avoid — Japan Guide @thebloggerbeee</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/dist/tabler-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8D5A3;
+      --gold-glow: rgba(201, 168, 76, 0.35);
+      --vermillion: #c0392b;
+      --vermillion-soft: rgba(192, 57, 43, 0.10);
+      --navy: #1a1a2e;
+      --cream: #f5e6c8;
+      --cream-muted: #c5b99a;
+      --color-text-primary: #1a1a1a;
+      --color-text-secondary: #5c5c5c;
+      --color-border-tertiary: rgba(201, 168, 76, 0.22);
+      --color-background-primary: #fff;
+      --color-background-secondary: #f7f7f7;
+      --border-radius-lg: 20px;
+      --border-radius-md: 10px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 1rem 1.25rem 2rem;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 168, 76, 0.18), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 100%, rgba(232, 213, 163, 0.25), transparent 50%),
+        radial-gradient(ellipse 50% 35% at 0% 80%, rgba(201, 168, 76, 0.12), transparent 45%),
+        linear-gradient(165deg, #faf6ee 0%, #f3ead8 45%, #ebe0c8 100%);
+      overflow-x: hidden;
+    }
+
+    /* background artifacts */
+    .artifact { position: fixed; pointer-events: none; z-index: 0; }
+    .artifact-ring { border-radius: 50%; border: 1px solid rgba(201, 168, 76, 0.2); }
+    .artifact-1 { width: 320px; height: 320px; top: -120px; right: -80px; border-width: 2px; opacity: 0.5; }
+    .artifact-2 { width: 180px; height: 180px; bottom: 8%; left: -40px; border-color: rgba(201, 168, 76, 0.15); }
+    .artifact-3 { width: 90px; height: 90px; top: 35%; left: 6%; background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%); border: none; }
+    .artifact-4 { width: 140px; height: 140px; bottom: 18%; right: 5%; border: 1px dashed rgba(201, 168, 76, 0.25); opacity: 0.6; }
+    .artifact-spark { width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(135deg, var(--gold-light), var(--gold)); box-shadow: 0 0 12px var(--gold-glow); }
+    .artifact-spark-1 { top: 22%; right: 18%; }
+    .artifact-spark-2 { bottom: 32%; left: 12%; }
+    .artifact-spark-3 { top: 58%; right: 8%; width: 4px; height: 4px; opacity: 0.7; }
+
+    .guide {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* back nav */
+    .back-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      padding: 0.5rem 0;
+      margin-bottom: 1rem;
+      transition: color 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .back-nav:hover { color: var(--gold); }
+    .back-nav i { font-size: 16px; transition: transform 0.2s; }
+    .back-nav:hover i { transform: translateX(-3px); }
+
+    /* hero */
+    .hero {
+      background: var(--navy);
+      color: var(--cream);
+      padding: 2.5rem 2rem 2rem;
+      border-radius: var(--border-radius-lg);
+      margin-bottom: 1.5rem;
+      position: relative;
+      overflow: hidden;
+      border-top: 3px solid var(--vermillion);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 30px 30px, rgba(192, 57, 43, 0.07) 2px, transparent 2px),
+        radial-gradient(circle at 0px 0px, rgba(192, 57, 43, 0.07) 2px, transparent 2px);
+      background-size: 30px 30px;
+      pointer-events: none;
+      opacity: 0.6;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 160px;
+      height: 160px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='rgba(192,57,43,0.12)' stroke-width='1'%3E%3Ccircle cx='100' cy='100' r='90'/%3E%3Ccircle cx='100' cy='100' r='70'/%3E%3Ccircle cx='100' cy='100' r='50'/%3E%3Cline x1='10' y1='100' x2='190' y2='100'/%3E%3Cline x1='100' y1='10' x2='100' y2='190'/%3E%3Cline x1='36' y1='36' x2='164' y2='164'/%3E%3Cline x1='164' y1='36' x2='36' y2='164'/%3E%3C/g%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .hero-torii {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      width: 90px;
+      height: 75px;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #e8985e;
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 38px;
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title em { font-style: italic; color: #e8985e; }
+
+    .hero-sub {
+      font-size: 13px;
+      color: var(--cream-muted);
+      font-weight: 300;
+      margin-top: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-stat-row {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      padding-top: 1.25rem;
+      border-top: 0.5px solid rgba(245, 230, 200, 0.2);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-stat-val { font-size: 20px; font-weight: 500; color: var(--cream); }
+    .hero-stat-label { font-size: 10px; color: var(--cream-muted); letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; }
+
+    /* section label */
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--color-text-secondary);
+      margin-bottom: 1rem;
+      padding-left: 2px;
+    }
+
+    /* mistakes grid */
+    .mistakes-grid {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+    }
+
+    .mistake-card {
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-top: 2px solid var(--gold);
+      border-radius: var(--border-radius-lg);
+      padding: 1rem 1.25rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      box-shadow: 0 4px 18px -4px rgba(201, 168, 76, 0.14), 0 1px 4px rgba(0,0,0,0.04);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .mistake-card:hover {
+      box-shadow: 0 6px 24px -4px rgba(201, 168, 76, 0.22), 0 2px 6px rgba(0,0,0,0.05);
+      transform: translateY(-1px);
+    }
+
+    .mistake-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(201, 168, 76, 0.10);
+      border: 0.5px solid rgba(201, 168, 76, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 16px;
+      color: var(--gold);
+      margin-top: 1px;
+    }
+
+    .mistake-text {
+      font-size: 14px;
+      color: var(--color-text-primary);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .mistake-text strong {
+      font-weight: 500;
+      color: var(--color-text-primary);
+    }
+
+    /* tip box */
+    .tip-box {
+      background: #fdf6ec;
+      border-left: 3px solid #e8985e;
+      border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+      padding: 10px 14px;
+      margin-bottom: 1.5rem;
+    }
+    .tip-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #c97a2e;
+      margin-bottom: 4px;
+      font-weight: 500;
+    }
+    .tip-text { font-size: 13px; color: var(--color-text-primary); line-height: 1.5; }
+
+    /* quick reads */
+    .quick-reads {
+      margin-top: 2rem;
+    }
+
+    .quick-reads-tabs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .quick-reads-tab {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-background-primary);
+      border: 0.5px solid var(--color-border-tertiary);
+      border-top: 2px solid var(--gold);
+      border-radius: var(--border-radius-lg);
+      padding: 1rem 0.75rem;
+      text-decoration: none;
+      color: var(--color-text-primary);
+      box-shadow: 0 4px 18px -4px rgba(201, 168, 76, 0.14);
+      transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .quick-reads-tab:hover {
+      background: rgba(201, 168, 76, 0.06);
+      box-shadow: 0 6px 24px -4px rgba(201, 168, 76, 0.22);
+      transform: translateY(-2px);
+    }
+
+    .quick-reads-tab-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(201, 168, 76, 0.10);
+      border: 0.5px solid rgba(201, 168, 76, 0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      color: var(--gold);
+    }
+
+    .quick-reads-tab-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--color-text-primary);
+      line-height: 1.3;
+    }
+
+    .quick-reads-tab-sub {
+      font-size: 10px;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.04em;
+    }
+
+    .footer-note {
+      text-align: center;
+      font-size: 12px;
+      color: var(--color-text-secondary);
+      padding: 1.25rem 0 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 0.75rem 1rem 1.5rem; }
+      .hero { padding: 1.75rem 1.25rem 1.5rem; }
+      .hero-title { font-size: 28px; }
+      .hero-stat-row { gap: 1rem; flex-wrap: wrap; }
+      .quick-reads-tabs { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .quick-reads-tab { padding: 0.875rem 0.5rem; }
+      .quick-reads-tab-label { font-size: 11px; }
+    }
+
+    @media (max-width: 380px) {
+      .hero-title { font-size: 24px; }
+      .quick-reads-tabs { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="artifact artifact-ring artifact-1" aria-hidden="true"></div>
+  <div class="artifact artifact-ring artifact-2" aria-hidden="true"></div>
+  <div class="artifact artifact-ring artifact-3" aria-hidden="true"></div>
+  <div class="artifact artifact-ring artifact-4" aria-hidden="true"></div>
+  <div class="artifact artifact-spark artifact-spark-1" aria-hidden="true"></div>
+  <div class="artifact artifact-spark artifact-spark-2" aria-hidden="true"></div>
+  <div class="artifact artifact-spark artifact-spark-3" aria-hidden="true"></div>
+
+  <div class="guide">
+
+    <a class="back-nav" href="../../index.html">
+      <i class="ti ti-arrow-left" aria-hidden="true"></i>
+      Back to Japan Guide
+    </a>
+
+    <!-- Hero -->
+    <div class="hero">
+      <svg class="hero-torii" aria-hidden="true" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="rgba(192,57,43,0.13)" stroke-width="2" stroke-linecap="round">
+        <line x1="10" y1="25" x2="110" y2="25"/>
+        <line x1="5" y1="35" x2="115" y2="35"/>
+        <line x1="22" y1="25" x2="22" y2="100"/>
+        <line x1="98" y1="25" x2="98" y2="100"/>
+        <line x1="10" y1="25" x2="5" y2="35"/>
+        <line x1="110" y1="25" x2="115" y2="35"/>
+        <line x1="15" y1="20" x2="22" y2="25"/>
+        <line x1="105" y1="20" x2="98" y2="25"/>
+        <line x1="15" y1="20" x2="105" y2="20"/>
+      </svg>
+      <div class="hero-tag">@thebloggerbeee · Japan 2025</div>
+      <div class="hero-title">Mistakes to <em>Avoid</em> 🇯🇵</div>
+      <div class="hero-sub">13 things we learned the hard way — so you don't have to.</div>
+
+    </div>
+
+    <!-- Mistakes -->
+    <p class="section-label">13 mistakes to avoid</p>
+
+    <div class="mistakes-grid" id="mistakes-container"></div>
+
+    <!-- Quick Reads -->
+    <div class="quick-reads">
+      <p class="section-label">Quick reads</p>
+      <div class="quick-reads-tabs">
+        <a class="quick-reads-tab" href="../../japan/index.html">
+          <div class="quick-reads-tab-icon"><i class="ti ti-map-2" aria-hidden="true"></i></div>
+          <div class="quick-reads-tab-label">Japan Guide</div>
+          <div class="quick-reads-tab-sub">9-day itinerary</div>
+        </a>
+        <a class="quick-reads-tab" href="../../affiliates/index.html">
+          <div class="quick-reads-tab-icon"><i class="ti ti-tag" aria-hidden="true"></i></div>
+          <div class="quick-reads-tab-label">Affiliate</div>
+          <div class="quick-reads-tab-sub">Deals & codes</div>
+        </a>
+        <a class="quick-reads-tab" href="../../index.html">
+          <div class="quick-reads-tab-icon"><i class="ti ti-home" aria-hidden="true"></i></div>
+          <div class="quick-reads-tab-label">Home Page</div>
+          <div class="quick-reads-tab-sub">All travels</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-note">save · share · explore more</div>
+  </div>
+
+  <script>
+    const mistakes = [
+      { icon: 'ti-file-description', text: '<strong>Fill your immigration & customs form before departure</strong> — it makes entry into Japan much smoother.' },
+      { icon: 'ti-shoe', text: '<strong>Avoid heels</strong> — 20–25k steps a day in Japan is very normal. Carry good walking shoes.' },
+      { icon: 'ti-salad', text: '<strong>Vegetarians:</strong> carry some ready-to-eat food from India. Many restaurants open around 11 AM and convenience stores don\'t always have veg options.' },
+      { icon: 'ti-wifi', text: '<strong>Buy an eSIM before boarding</strong> so you already have internet when you land (we got ours from Klook).' },
+      { icon: 'ti-moon', text: '<strong>Don\'t land at midnight</strong> — taxis are expensive and most public transport stops around 11 PM.' },
+      { icon: 'ti-cash', text: '<strong>Carry cash</strong> — Japan is still very cash-friendly for temples, tickets, and small shops.' },
+      { icon: 'ti-train', text: '<strong>Don\'t stress about the Suica card</strong> — you can easily buy train tickets at stations and the price is the same.' },
+      { icon: 'ti-volume-2', text: '<strong>Don\'t talk loudly in trains</strong> — public transport in Japan is extremely quiet and people usually keep conversations minimal.' },
+      { icon: 'ti-trash', text: '<strong>Always carry a small bag for trash</strong> — public dustbins are rare, especially on streets.' },
+      { icon: 'ti-walk', text: '<strong>Don\'t eat while walking</strong> — it\'s generally considered bad etiquette. Finish food near the stall where you bought it.' },
+      { icon: 'ti-luggage', text: '<strong>Check luggage size for trains</strong> — oversized luggage on Shinkansen sometimes requires a reserved luggage seat.' },
+      { icon: 'ti-clock', text: '<strong>Start popular places early</strong> — spots like Fushimi Inari Taisha or Kiyomizu-dera get extremely crowded after 8–9 AM.' },
+      { icon: 'ti-coin', text: '<strong>Keep coins</strong> — many vending machines, temple entries, and lockers work best with coins.' },
+    ];
+
+    const container = document.getElementById('mistakes-container');
+    container.innerHTML = mistakes.map(m => `
+      <div class="mistake-card">
+        <div class="mistake-icon"><i class="ti ${m.icon}" aria-hidden="true"></i></div>
+        <div class="mistake-text">${m.text}</div>
+      </div>
+    `).join('');
+  </script>
+</body>
+</html>
