@@ -524,8 +524,15 @@
       padding-inline: 1.25rem;
       scroll-padding-inline: 1.25rem;
     }
-    .reel-embed { flex: 0 0 260px; width: 260px; }
-    .reel-embed iframe { height: 480px; }
+    .reel-embed { 
+      flex: 0 0 280px; 
+      width: 280px; 
+    }
+    .reel-embed iframe { 
+      width: 100%;
+      height: auto;
+      aspect-ratio: 9 / 16; 
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
