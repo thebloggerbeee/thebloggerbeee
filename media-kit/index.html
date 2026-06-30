@@ -6,169 +6,292 @@
 <title>THEBLOGGERBEEE — Media Kit</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #FFFFFF;
-    --ink: #211C10;
-    --ink-soft: #6B6048;
-    --hairline: #E9DBB4;
-    --sand: #C9A84C;
-    --sand-deep: #8B6914;
-    --cream: #FFFBF0;
+    --gold: #C9A84C;
+    --gold-light: #E8D5A3;
+    --gold-dark: #8B6914;
+    --gold-pale: #fffbf0;
+    --gold-glow: rgba(201, 168, 76, 0.35);
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #5c5c5c;
+    --color-text-tertiary: #999;
+    --color-border-tertiary: rgba(201, 168, 76, 0.22);
+    --color-background-primary: #fff;
+    --font-sans: 'DM Sans', system-ui, sans-serif;
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --border-radius-lg: 20px;
   }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--paper);
-    color: var(--ink);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    padding: 2rem 1.25rem 3rem;
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201, 168, 76, 0.18), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 100% 100%, rgba(232, 213, 163, 0.25), transparent 50%),
+      radial-gradient(ellipse 50% 35% at 0% 80%, rgba(201, 168, 76, 0.12), transparent 45%),
+      linear-gradient(165deg, #faf6ee 0%, #f3ead8 45%, #ebe0c8 100%);
+    color: var(--color-text-primary);
     line-height: 1.6;
     font-size: 15px;
+    position: relative;
+    overflow-x: hidden;
   }
 
-  .wrap {
-    max-width: 900px;
+  .artifact {
+    position: fixed;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .artifact-ring { border-radius: 50%; border: 1px solid rgba(201, 168, 76, 0.2); }
+  .artifact-1 { width: 320px; height: 320px; top: -120px; right: -80px; border-width: 2px; opacity: 0.5; }
+  .artifact-2 { width: 180px; height: 180px; bottom: 8%; left: -40px; border-color: rgba(201, 168, 76, 0.15); }
+  .artifact-3 {
+    width: 90px; height: 90px; top: 35%; left: 6%;
+    background: radial-gradient(circle, var(--gold-glow) 0%, transparent 70%);
+    border: none;
+  }
+  .artifact-4 {
+    width: 140px; height: 140px; bottom: 18%; right: 5%;
+    border: 1px dashed rgba(201, 168, 76, 0.25); opacity: 0.6;
+  }
+  .artifact-spark {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    box-shadow: 0 0 12px var(--gold-glow);
+  }
+  .artifact-spark-1 { top: 22%; right: 18%; }
+  .artifact-spark-2 { bottom: 32%; left: 12%; }
+
+  .page {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
     margin: 0 auto;
-    padding: 48px 24px 80px;
+  }
+
+  .kit-card {
+    background: var(--color-background-primary);
+    border-radius: var(--border-radius-lg);
+    border: 0.5px solid var(--color-border-tertiary);
+    padding: 2.5rem 2rem 2rem;
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.9) inset,
+      0 24px 48px -12px rgba(139, 105, 20, 0.12),
+      0 8px 24px -8px rgba(26, 26, 26, 0.06);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .kit-card::before,
+  .kit-card::after {
+    content: '';
+    position: absolute;
+    border: 1px solid rgba(201, 168, 76, 0.12);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .kit-card::before { width: 140px; height: 140px; top: -60px; right: -60px; }
+  .kit-card::after { width: 100px; height: 100px; bottom: -50px; left: -50px; opacity: 0.6; }
+
+  .gold-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .gold-ornament-line {
+    flex: 1;
+    max-width: 72px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold), var(--gold-light), transparent);
+  }
+  .gold-ornament-gem {
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 50%, var(--gold-dark) 100%);
+    box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.15);
   }
 
   header {
-    padding-bottom: 40px;
-    border-bottom: 1px solid var(--hairline);
-    margin-bottom: 48px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin-bottom: 2rem;
   }
 
   .brand {
-    font-size: 12px;
+    font-size: 10px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    font-weight: 600;
-    color: var(--sand-deep);
-    margin-bottom: 16px;
+    font-weight: 500;
+    color: var(--gold-dark);
+    margin-bottom: 0.75rem;
+    opacity: 0.9;
   }
 
   h1 {
-    font-size: clamp(28px, 5vw, 36px);
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
     font-weight: 600;
     line-height: 1.2;
-    margin-bottom: 12px;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
   }
 
   .tagline {
-    color: var(--ink-soft);
-    max-width: 560px;
+    color: var(--color-text-secondary);
+    font-weight: 300;
+    max-width: 520px;
+    margin: 0 auto;
+    font-size: 14px;
   }
 
   .meta-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 20px;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 1.25rem;
   }
 
   .meta-row span {
     font-size: 12px;
-    padding: 6px 12px;
-    border: 1px solid var(--hairline);
-    border-radius: 4px;
-    color: var(--ink-soft);
+    padding: 8px 16px;
+    border-radius: 50px;
+    border: 0.5px solid var(--gold);
+    color: var(--gold-dark);
+    font-weight: 500;
+    background: var(--gold-pale);
+  }
+
+  .divider {
+    border: none;
+    height: 1px;
+    margin: 0 0 1.75rem;
+    background: linear-gradient(90deg, transparent, var(--color-border-tertiary), var(--gold-light), var(--color-border-tertiary), transparent);
+    position: relative;
+    z-index: 1;
   }
 
   section {
-    margin-bottom: 48px;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
   }
 
   h2 {
-    font-size: 11px;
-    letter-spacing: 0.12em;
+    font-size: 10px;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: var(--sand-deep);
-    font-weight: 600;
-    margin-bottom: 20px;
+    color: var(--gold-dark);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    opacity: 0.9;
   }
 
   .about {
-    color: var(--ink-soft);
+    color: var(--color-text-secondary);
+    font-weight: 300;
     max-width: 640px;
+    font-size: 14px;
+    margin: 0 auto;
   }
 
   .stats {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 1px;
-    background: var(--hairline);
-    border: 1px solid var(--hairline);
+    gap: 10px;
   }
 
   .stat {
-    background: var(--cream);
-    padding: 20px 16px;
+    background: linear-gradient(135deg, #fff 0%, var(--gold-pale) 100%);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 14px;
+    padding: 18px 16px;
   }
 
   .stat .num {
-    font-size: 28px;
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
     font-weight: 600;
-    color: var(--ink);
+    color: var(--color-text-primary);
     line-height: 1.1;
   }
 
   .stat .label {
-    font-size: 12px;
-    color: var(--ink-soft);
+    font-size: 11px;
+    color: var(--color-text-secondary);
     margin-top: 4px;
+    letter-spacing: 0.02em;
   }
 
   .stat.highlight {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--paper);
+    background: linear-gradient(135deg, var(--gold-pale) 0%, #fdf3d0 100%);
+    border-color: rgba(201, 168, 76, 0.4);
+    box-shadow: 0 0 0 1px rgba(201, 168, 76, 0.08), 0 4px 12px -4px rgba(201, 168, 76, 0.2);
   }
 
-  .stat.highlight .num { font-size: 24px; }
+  .stat.highlight .num {
+    color: var(--gold-dark);
+  }
 
   .demo-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 32px;
+    gap: 24px;
+  }
+
+  .demo-block {
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 14px;
+    padding: 18px 16px;
+    background: linear-gradient(135deg, #fff 0%, var(--gold-pale) 100%);
   }
 
   .demo-block h3 {
     font-size: 13px;
     font-weight: 500;
-    color: var(--ink);
+    color: var(--color-text-primary);
     margin-bottom: 12px;
   }
 
-  .bar-row {
-    margin-bottom: 12px;
-  }
+  .bar-row { margin-bottom: 12px; }
 
   .bar-row .top {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 8px;
     font-size: 13px;
     margin-bottom: 6px;
   }
 
   .bar-row .top b {
+    font-family: var(--font-serif);
     font-weight: 600;
-    color: var(--sand-deep);
+    font-style: italic;
+    color: var(--gold-dark);
   }
 
   .bar-track {
     height: 4px;
-    background: var(--hairline);
+    background: rgba(201, 168, 76, 0.15);
     border-radius: 2px;
     overflow: hidden;
   }
 
   .bar-fill {
     height: 100%;
-    background: var(--sand);
+    background: linear-gradient(90deg, var(--gold-light), var(--gold));
     width: 0;
     border-radius: 2px;
     transition: width 0.8s ease;
@@ -178,71 +301,75 @@
     display: flex;
     gap: 24px;
     margin-bottom: 16px;
+    justify-content: center;
   }
 
   .gender-row div {
-    font-size: 22px;
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
     font-weight: 600;
   }
 
   .gender-row span {
     display: block;
-    font-size: 12px;
+    font-family: var(--font-sans);
+    font-size: 11px;
     font-weight: 400;
-    color: var(--ink-soft);
+    color: var(--color-text-secondary);
     margin-top: 2px;
   }
 
-  .dest-list {
-    list-style: none;
-  }
+  .dest-list { list-style: none; }
 
   .dest-list li {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 12px;
     padding: 8px 0;
-    border-bottom: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--color-border-tertiary);
     font-size: 14px;
   }
 
+  .dest-list li:last-child { border-bottom: none; }
+
   .dest-list li span {
-    color: var(--ink-soft);
+    color: var(--color-text-secondary);
     font-size: 12px;
   }
 
   .conv-box {
-    background: var(--cream);
-    border: 1px solid var(--hairline);
-    padding: 24px;
-    border-radius: 4px;
+    background: linear-gradient(135deg, var(--gold-pale) 0%, #fdf3d0 100%);
+    border: 0.5px solid rgba(201, 168, 76, 0.35);
+    border-radius: 14px;
+    padding: 20px 18px;
   }
 
-  .conv-box p {
-    color: var(--ink-soft);
-    margin-bottom: 20px;
+  .conv-box > p {
+    color: var(--color-text-secondary);
+    margin-bottom: 16px;
     font-size: 14px;
+    font-weight: 300;
   }
 
   .conv-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 10px;
   }
 
   .conv-stats .stat {
-    background: var(--paper);
-    border: 1px solid var(--hairline);
-    border-radius: 4px;
+    background: #fff;
+    text-align: center;
   }
 
   .partners {
-    margin-top: 16px;
+    margin-top: 14px;
     font-size: 12px;
-    color: var(--ink-soft);
+    color: var(--color-text-secondary);
   }
 
   .partners strong {
-    color: var(--ink);
+    color: var(--gold-dark);
     font-weight: 500;
   }
 
@@ -250,82 +377,155 @@
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+    justify-content: center;
   }
 
   .collab-list span {
     font-size: 13px;
     padding: 8px 14px;
-    background: var(--cream);
-    border: 1px solid var(--hairline);
-    border-radius: 4px;
-    color: var(--ink);
+    background: var(--gold-pale);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 50px;
+    color: var(--color-text-primary);
+  }
+
+  .reels-intro {
+    color: var(--color-text-secondary);
+    font-weight: 300;
+    font-size: 14px;
+    max-width: 520px;
+    margin: 0 auto 1.25rem;
+  }
+
+  .reels-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 2rem;
+    padding-bottom: 12px;
+    margin: 0 -2rem;
+    padding-inline: 2rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold-light) transparent;
+  }
+
+  .reels-grid::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .reels-grid::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .reels-grid::-webkit-scrollbar-thumb {
+    background: var(--gold-light);
+    border-radius: 3px;
+  }
+
+  .reel-embed {
+    flex: 0 0 280px;
+    width: 280px;
+    scroll-snap-align: center;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--gold-pale);
+    box-shadow: 0 8px 24px -8px rgba(139, 105, 20, 0.12);
+  }
+
+  .reel-embed iframe {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border: none;
   }
 
   .deliv-list {
     list-style: none;
-    border: 1px solid var(--hairline);
-    border-radius: 4px;
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 14px;
     overflow: hidden;
   }
 
   .deliv-list li {
     padding: 14px 16px;
-    border-bottom: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--color-border-tertiary);
     display: flex;
     gap: 12px;
     align-items: baseline;
+    justify-content: center;
+    background: linear-gradient(135deg, #fff 0%, var(--gold-pale) 100%);
+    font-size: 14px;
   }
 
-  .deliv-list li:last-child {
-    border-bottom: none;
-  }
+  .deliv-list li:last-child { border-bottom: none; }
 
   .deliv-list .idx {
-    font-size: 12px;
-    color: var(--sand-deep);
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold-dark);
     font-weight: 600;
-    min-width: 20px;
+    min-width: 22px;
   }
 
   footer {
-    padding-top: 32px;
-    border-top: 1px solid var(--hairline);
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border-tertiary);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     gap: 24px;
+    position: relative;
+    z-index: 1;
   }
 
   .contact a {
-    color: var(--ink);
+    color: var(--color-text-primary);
     text-decoration: none;
     font-weight: 500;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.35);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
   }
 
   .contact a:hover {
-    color: var(--sand-deep);
+    color: var(--gold-dark);
+    border-color: var(--gold);
   }
 
   .contact .k {
-    font-size: 11px;
-    letter-spacing: 0.08em;
+    font-size: 10px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--ink-soft);
+    color: var(--gold-dark);
     margin-bottom: 4px;
+    opacity: 0.9;
   }
 
-  .contact > div {
-    margin-bottom: 12px;
-  }
+  .contact > div { margin-bottom: 12px; }
 
   .footer-note {
-    font-size: 12px;
-    color: var(--ink-soft);
-    align-self: end;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--color-text-tertiary);
   }
 
   @media (max-width: 600px) {
+    .kit-card { padding: 2rem 1.25rem 1.75rem; }
     .conv-stats { grid-template-columns: 1fr; }
+    .artifact-1, .artifact-4 { opacity: 0.35; }
+    .reels-grid {
+      margin: 0 -1.25rem;
+      padding-inline: 1.25rem;
+      scroll-padding-inline: 1.25rem;
+    }
+    .reel-embed { flex: 0 0 260px; width: 260px; }
+    .reel-embed iframe { height: 480px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -335,149 +535,202 @@
 </head>
 <body>
 
-<div class="wrap">
+<div class="artifact artifact-ring artifact-1" aria-hidden="true"></div>
+<div class="artifact artifact-ring artifact-2" aria-hidden="true"></div>
+<div class="artifact artifact-ring artifact-3" aria-hidden="true"></div>
+<div class="artifact artifact-ring artifact-4" aria-hidden="true"></div>
+<div class="artifact artifact-spark artifact-spark-1" aria-hidden="true"></div>
+<div class="artifact artifact-spark artifact-spark-2" aria-hidden="true"></div>
 
-  <header>
-    <div class="brand">THEBLOGGERBEEE · Media Kit 2026</div>
-    <h1>Soumya &amp; Sachin</h1>
-    <p class="tagline">Travel journal focused on real itineraries, honest reviews, and destination storytelling across Reels, vlogs, and guides.</p>
-    <div class="meta-row">
-      <span>Instagram</span>
-      <span>YouTube</span>
-      <span>Facebook</span>
-      <span>Threads</span>
+<div class="page">
+  <div class="kit-card">
+
+    <div class="gold-ornament" aria-hidden="true">
+      <span class="gold-ornament-line"></span>
+      <span class="gold-ornament-gem"></span>
+      <span class="gold-ornament-line"></span>
     </div>
-  </header>
 
-  <section>
-    <h2>About</h2>
-    <p class="about">We partner with luxury resorts, tourism boards, and experience operators to turn destinations into content that drives discovery and bookings — not just impressions.</p>
-  </section>
+    <header>
+      <div class="brand">THEBLOGGERBEEE · Media Kit 2026</div>
+      <h1>Soumya &amp; Sachin</h1>
+      <p class="tagline">Travel journal focused on real itineraries, honest reviews, and destination storytelling across Reels, vlogs, and guides.</p>
+      <div class="meta-row">
+        <span>Instagram</span>
+        <span>YouTube</span>
+        <span>Facebook</span>
+        <span>Threads</span>
+      </div>
+    </header>
 
-  <section>
-    <h2>Reach &amp; Performance · Last 30 Days</h2>
-    <div class="stats">
-      <div class="stat">
-        <div class="num" data-count="60.2" data-suffix="K">60.2K</div>
-        <div class="label">Followers</div>
-      </div>
-      <div class="stat">
-        <div class="num" data-count="629.9" data-suffix="K">629.9K</div>
-        <div class="label">Accounts Reached</div>
-      </div>
-      <div class="stat">
-        <div class="num" data-count="1.09" data-suffix="M">1.09M</div>
-        <div class="label">Views</div>
-      </div>
-      <div class="stat">
-        <div class="num" data-count="45.6" data-suffix="K">45.6K</div>
-        <div class="label">Interactions</div>
-      </div>
-      <div class="stat highlight">
-        <div class="label">Reach from non-followers</div>
-        <div class="num" data-count="86.2" data-suffix="%">86.2%</div>
-      </div>
-    </div>
-  </section>
+    <hr class="divider">
 
-  <section>
-    <h2>Audience · Last 30 Days</h2>
-    <div class="demo-grid">
-      <div class="demo-block">
-        <h3>Geography</h3>
-        <div class="bar-row">
-          <div class="top">India <b>91.8%</b></div>
-          <div class="bar-track"><div class="bar-fill" data-w="91.8"></div></div>
-        </div>
-      </div>
-      <div class="demo-block">
-        <h3>Gender &amp; Age</h3>
-        <div class="gender-row">
-          <div>54.3<span>Men</span></div>
-          <div>45.7<span>Women</span></div>
-        </div>
-        <div class="bar-row">
-          <div class="top">25–34 <b>41.4%</b></div>
-          <div class="bar-track"><div class="bar-fill" data-w="41.4"></div></div>
-        </div>
-        <div class="bar-row">
-          <div class="top">35–44 <b>34.5%</b></div>
-          <div class="bar-track"><div class="bar-fill" data-w="34.5"></div></div>
-        </div>
-      </div>
-      <div class="demo-block">
-        <h3>Recent Destinations</h3>
-        <ul class="dest-list">
-          <li>Japan <span>Honshu</span></li>
-          <li>Cambodia <span>Siem Reap</span></li>
-          <li>Bali <span>Indonesia</span></li>
-          <li>Thailand <span>Phuket</span></li>
-          <li>UAE <span>Dubai</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    <section>
+      <h2>About</h2>
+      <p class="about">We partner with luxury resorts, tourism boards, and experience operators to turn destinations into content that drives discovery and bookings — not just impressions.</p>
+    </section>
 
-  <section>
-    <h2>Conversion · Last 30 Days</h2>
-    <div class="conv-box">
-      <p>Content that drives clicks and bookings through travel affiliates.</p>
-      <div class="conv-stats">
+    <hr class="divider">
+
+    <section>
+      <h2>Reach &amp; Performance · Last 30 Days</h2>
+      <div class="stats">
         <div class="stat">
-          <div class="num">260</div>
-          <div class="label">Travel Clicks</div>
+          <div class="num">60.2K</div>
+          <div class="label">Followers</div>
         </div>
         <div class="stat">
-          <div class="num">14</div>
-          <div class="label">Travel Bookings</div>
+          <div class="num">629.9K</div>
+          <div class="label">Accounts Reached</div>
         </div>
         <div class="stat">
-          <div class="num">5.38%</div>
-          <div class="label">Conversion Rate</div>
+          <div class="num">1.09M</div>
+          <div class="label">Views</div>
+        </div>
+        <div class="stat">
+          <div class="num">45.6K</div>
+          <div class="label">Interactions</div>
+        </div>
+        <div class="stat highlight">
+          <div class="num">86.2%</div>
+          <div class="label">Reach from non-followers</div>
         </div>
       </div>
-      <p class="partners"><strong>Affiliate partners:</strong> Agoda, Klook, GetYourGuide</p>
-    </div>
-  </section>
+    </section>
 
-  <section>
-    <h2>What We Offer</h2>
-    <ul class="deliv-list">
-      <li><span class="idx">01</span> Dedicated Instagram Reel</li>
-      <li><span class="idx">02</span> Instagram Stories</li>
-      <li><span class="idx">03</span> Travel Guide &amp; Carousel Mentions</li>
-      <li><span class="idx">04</span> YouTube Vlog Integration</li>
-      <li><span class="idx">05</span> Google Review</li>
-      <li><span class="idx">06</span> Long-Term Discoverability Through Itinerary Content</li>
-    </ul>
-  </section>
+    <hr class="divider">
 
-  <section>
-    <h2>Previous Collaborations</h2>
-    <div class="collab-list">
-      <span>AirAsia</span>
-      <span>Orient Exchange</span>
-      <span>FirstClub</span>
-      <span>Parachute</span>
-      <span>Pizza Hut</span>
-      <span>Tourism &amp; Hospitality Partners</span>
-    </div>
-  </section>
-
-  <footer>
-    <div class="contact">
-      <div>
-        <div class="k">Email</div>
-        <a href="mailto:soumyamishrikoti@gmail.com">soumyamishrikoti@gmail.com</a>
+    <section>
+      <h2>Audience · Last 30 Days</h2>
+      <div class="demo-grid">
+        <div class="demo-block">
+          <h3>Geography</h3>
+          <div class="bar-row">
+            <div class="top">India <b>91.8%</b></div>
+            <div class="bar-track"><div class="bar-fill" data-w="91.8"></div></div>
+          </div>
+        </div>
+        <div class="demo-block">
+          <h3>Gender &amp; Age</h3>
+          <div class="gender-row">
+            <div>54.3<span>Men</span></div>
+            <div>45.7<span>Women</span></div>
+          </div>
+          <div class="bar-row">
+            <div class="top">25–34 <b>41.4%</b></div>
+            <div class="bar-track"><div class="bar-fill" data-w="41.4"></div></div>
+          </div>
+          <div class="bar-row">
+            <div class="top">35–44 <b>34.5%</b></div>
+            <div class="bar-track"><div class="bar-fill" data-w="34.5"></div></div>
+          </div>
+        </div>
+        <div class="demo-block">
+          <h3>Recent Destinations</h3>
+          <ul class="dest-list">
+            <li>Japan <span>Honshu</span></li>
+            <li>Cambodia <span>Siem Reap</span></li>
+            <li>Bali <span>Indonesia</span></li>
+            <li>Thailand <span>Phuket</span></li>
+            <li>UAE <span>Dubai</span></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <div class="k">Instagram</div>
-        <a href="https://instagram.com/thebloggerbeee" target="_blank">@thebloggerbeee</a>
-      </div>
-    </div>
-    <div class="footer-note">THEBLOGGERBEEE · 2026</div>
-  </footer>
+    </section>
 
+    <hr class="divider">
+
+    <section>
+      <h2>Conversion · Last 30 Days</h2>
+      <div class="conv-box">
+        <p>Content that drives clicks and bookings through travel affiliates.</p>
+        <div class="conv-stats">
+          <div class="stat">
+            <div class="num">260</div>
+            <div class="label">Travel Clicks</div>
+          </div>
+          <div class="stat">
+            <div class="num">14</div>
+            <div class="label">Travel Bookings</div>
+          </div>
+          <div class="stat">
+            <div class="num">5.38%</div>
+            <div class="label">Conversion Rate</div>
+          </div>
+        </div>
+        <p class="partners"><strong>Affiliate partners:</strong> Agoda, Klook, GetYourGuide</p>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+      <h2>What We Offer</h2>
+      <ul class="deliv-list">
+        <li><span class="idx">01</span> Dedicated Instagram Reel</li>
+        <li><span class="idx">02</span> Instagram Stories</li>
+        <li><span class="idx">03</span> Travel Guide &amp; Carousel Mentions</li>
+        <li><span class="idx">04</span> YouTube Vlog Integration</li>
+        <li><span class="idx">05</span> Google Review</li>
+        <li><span class="idx">06</span> Long-Term Discoverability Through Itinerary Content</li>
+      </ul>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+      <h2>Previous Collaborations</h2>
+      <div class="collab-list">
+        <span>AirAsia</span>
+        <span>Orient Exchange</span>
+        <span>FirstClub</span>
+        <span>Parachute</span>
+        <span>Pizza Hut</span>
+        <span>Tourism &amp; Hospitality Partners</span>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <section>
+      <h2>Featured Reels · Hospitality &amp; Travel</h2>
+      <p class="reels-intro">Recent Instagram collaborations with resorts, destinations, and travel brands.</p>
+      <div class="reels-grid">
+        <div class="reel-embed">
+          <iframe src="https://www.instagram.com/reel/DNVU33LvVwf/embed" title="Instagram Reel — Hospitality &amp; Travel Collaboration" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="reel-embed">
+          <iframe src="https://www.instagram.com/reel/DKMy7yJPKHN/embed" title="Instagram Reel — Hospitality &amp; Travel Collaboration" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="reel-embed">
+          <iframe src="https://www.instagram.com/reel/DJPKclNI0T4/embed" title="Instagram Reel — Hospitality &amp; Travel Collaboration" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="reel-embed">
+          <iframe src="https://www.instagram.com/reel/DFVcY0VPUB7/embed" title="Instagram Reel — Hospitality &amp; Travel Collaboration" loading="lazy" allowfullscreen></iframe>
+        </div>
+        <div class="reel-embed">
+          <iframe src="https://www.instagram.com/reel/C_dPubkPPa7/embed" title="Instagram Reel — Hospitality &amp; Travel Collaboration" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <footer>
+      <div class="contact">
+        <div>
+          <div class="k">Email</div>
+          <a href="mailto:soumyamishrikoti@gmail.com">soumyamishrikoti@gmail.com</a>
+        </div>
+        <div>
+          <div class="k">Instagram</div>
+          <a href="https://instagram.com/thebloggerbeee" target="_blank">@thebloggerbeee</a>
+        </div>
+      </div>
+      <div class="footer-note">✦ THEBLOGGERBEEE · 2026 ✦</div>
+    </footer>
+
+  </div>
 </div>
 
 <script>
